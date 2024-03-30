@@ -5,6 +5,7 @@ function Set-PyvenvActive([string] $venvName) {
     }
 
     . $venvName/Scripts/Activate.ps1
+    pip install --upgrade pip
 }
 
 function New-Pyvenv([string] $venvName) {
