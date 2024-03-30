@@ -53,6 +53,22 @@ function Install-DevRequirements() {
     Install-Requirements "requirements_dev.txt"
 }
 
+function Install-Package([string] $packageName) {
+    pip install $packageName
+}
+
+function Remove-Package([string] $packageName) {
+    pip uninstall $packageName
+}
+
+function Show-Package([string] $packageName) {
+    pip show $packageName
+}
+
+function Get-Packages() {
+    pip list
+}
+
 
 # Python aliases
 Set-Alias -Name py -Value python
@@ -66,3 +82,8 @@ Set-Alias -Name remove -Value Remove-Pyvenv
 Set-Alias -Name install -Value Install-DevRequirements
 Set-Alias -Name installr -Value Install-Requirements
 Set-Alias -Name installd -Value Install-DevRequirements
+
+Set-Alias -Name pipi -Value Install-Package
+Set-Alias -Name pipu -Value Remove-Package
+Set-Alias -Name pips -Value Show-Package
+Set-Alias -Name pipl -Value Get-Packages
