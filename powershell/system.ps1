@@ -8,6 +8,11 @@ function New-SetDirectory([string] $directory_name) {
     Set-Location -Path $directory_name
 }
 
+function New-File([string] $file_name) {
+	New-Item -ItemType File -Path $file_name
+}
+
+
 # System aliases
 Set-Alias -Name .. -Value Set-ParentDirectory
 ${function:...} = { Set-Location ..\.. }
@@ -19,4 +24,5 @@ ${function:docs} = { Set-Location ~\Documents }
 ${function:p} = { Set-Location ~\Documents\sync\projects }
 ${function:dw} = { Set-Location ~\Downloads }
 
+Set-Alias -Name touch -Value New-File
 Set-Alias -Name mkd -Value New-SetDirectory
