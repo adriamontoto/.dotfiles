@@ -32,12 +32,18 @@ ${function:....} = { Set-Location ..\..\.. }
 ${function:~} = { Set-Location ~ }
 
 ${function:de} = { Set-Location ~\Desktop }
+${function:desktop} = { Set-Location ~\Desktop }
 ${function:docs} = { Set-Location ~\Documents }
 ${function:p} = { Set-Location ~\Documents\sync\projects }
+${function:projects} = { Set-Location ~\Documents\sync\projects }
 ${function:dw} = { Set-Location ~\Downloads }
+${function:downloads} = { Set-Location ~\Downloads }
+${function:dotfiles} = { Set-Location ~\.dotfiles }
 
 Set-Alias -Name touch -Value New-File
+Set-Alias -Name grep -Value findstr
 Set-Alias -Name mkd -Value New-SetDirectory
+${function:cwd} = { (Get-Location).Path | Set-Clipboard }
 
 
 # Extra functions
