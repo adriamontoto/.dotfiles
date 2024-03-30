@@ -14,11 +14,6 @@ function New-File() {
     }
 }
 
-function Clear-List() {
-    Clear-Host
-    Get-ChildItem
-}
-
 
 # System aliases
 Set-Alias -Name l -Value Get-ChildItem
@@ -26,7 +21,7 @@ Set-Alias -Name ll -Value Get-ChildItem
 Set-Alias -Name la -Value Get-ChildItem
 Set-Alias -Name lla -Value Get-ChildItem
 
-Set-Alias -Name cll -Value Clear-List
+${function:cll} = { Clear-List; Get-ChildItem }
 
 Set-Alias -Name .. -Value Set-ParentDirectory
 ${function:...} = { Set-Location ..\.. }
