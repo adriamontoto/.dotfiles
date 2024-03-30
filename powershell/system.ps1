@@ -8,8 +8,10 @@ function New-SetDirectory([string] $directory_name) {
     Set-Location -Path $directory_name
 }
 
-function New-File([string] $file_name) {
-    New-Item -ItemType File -Path $file_name
+function New-File() {
+    foreach ($file in $args) {
+        New-Item -ItemType File -Path $file
+    }
 }
 
 function Clear-List() {
