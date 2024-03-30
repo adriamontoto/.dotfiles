@@ -12,8 +12,20 @@ function New-File([string] $file_name) {
     New-Item -ItemType File -Path $file_name
 }
 
+function Clear-List() {
+    Clear-Host
+    Get-ChildItem
+}
+
 
 # System aliases
+Set-Alias -Name l -Value Get-ChildItem
+Set-Alias -Name ll -Value Get-ChildItem
+Set-Alias -Name la -Value Get-ChildItem
+Set-Alias -Name lla -Value Get-ChildItem
+
+Set-Alias -Name cll -Value Clear-List
+
 Set-Alias -Name .. -Value Set-ParentDirectory
 ${function:...} = { Set-Location ..\.. }
 ${function:....} = { Set-Location ..\..\.. }
