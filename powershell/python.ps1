@@ -41,6 +41,9 @@ function Remove-Pyvenv([string] $venvName) {
 
 
 # Python aliases
+Set-Alias -Name py -Value python
+Set-Alias -Name python3 -Value python
+
 Set-Alias -Name create -Value New-Pyvenv
 Set-Alias -Name activate -Value Set-PyvenvActive
 # deactivate is a built-in command in Python
