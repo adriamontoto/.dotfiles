@@ -26,6 +26,8 @@ alias dw='cd ~/Downloads'
 alias downloads='cd ~/Downloads'
 alias dotfiles='cd ~/.dotfiles'
 
+alias reload='exec $SHELL -l'
+
 
 # Extra Functions
 function get_ip_address() {
