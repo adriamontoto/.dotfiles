@@ -65,5 +65,5 @@ function Get-LocalIpAddress() {
 
 
 # Extra aliases
-Set-Alias -Name ip -Value Get-IpAddress
+Set-Alias -Name myip -Value Get-IpAddress
 Set-Alias -Name localip -Value Get-LocalIpAddress
