@@ -29,8 +29,6 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # see 'man strftime' for details.
 HIST_STAMPS="dd/mm/yyyy"
 
-source $ZSH/oh-my-zsh.sh
-
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 
@@ -44,6 +42,12 @@ source ~/.dotfiles/zsh/system.zsh
 #############################################
 ################## PLUGINS ##################
 #############################################
+# TODO: install syntax-highlighting: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+# TODO: install autosuggestions: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 plugins=(sudo
          git
-	     command-not-found)
+	     command-not-found
+         zsh-syntax-highlighting
+         zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
