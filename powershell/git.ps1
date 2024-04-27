@@ -7,6 +7,7 @@ ${function:ga} = { git add $args }
 ${function:gc} = { git commit -m $args }
 ${function:gpull} = { git pull $args }
 ${function:gpush} = { git push $args }
+${function:gforce} = { git push --force-with-lease $args }
 ${function:glog} = { git log --oneline --decorate --color }
 ${function:gammend} = { git commit --amend --no-edit }
 ${function:gundo} = { git reset --soft HEAD~1 }
