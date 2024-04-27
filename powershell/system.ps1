@@ -21,7 +21,7 @@ Set-Alias -Name ll -Value Get-ChildItem
 Set-Alias -Name la -Value Get-ChildItem
 Set-Alias -Name lla -Value Get-ChildItem
 
-${function:cll} = { Clear-List; Get-ChildItem }
+${function:cll} = { clear; Get-ChildItem }
 
 Set-Alias -Name .. -Value Set-ParentDirectory
 ${function:...} = { Set-Location ..\.. }
