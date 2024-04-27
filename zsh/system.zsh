@@ -52,7 +52,7 @@ function get_local_ip_address() {
 
 # Extra Aliases
 alias myip='get_ip_address'
-alias iplocal='get_local_ip_address'
+alias localip='get_local_ip_address'
 
 alias dog='cat'
 alias please='sudo'
