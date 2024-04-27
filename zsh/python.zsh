@@ -23,7 +23,6 @@ function create_pyvenv() {
 
     python3 -m venv $venv_name
     activate_pyvenv $venv_name
-    python -m pip install --upgrade pip
 }
 
 function remove_pyvenv() {
