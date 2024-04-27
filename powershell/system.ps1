@@ -49,18 +49,20 @@ function Get-IpAddress() {
 }
 
 function Get-LocalIpAddress() {
-    $ip = (Get-NetIPAddress -InterfaceAlias "Wi-Fi" -AddressFamily IPv4).IPAddress
+    $interfacesToCheck = @("Wi-Fi", "Ethernet")  # Add more interfaces if needed
 
-    if (-not $ip) {
-        $ip = (Get-NetIPAddress -InterfaceAlias "Ethernet" -AddressFamily IPv4).IPAddress
+    foreach ($interface in $interfacesToCheck) {
+        try {
+            $ip = (Get-NetIPAddress -InterfaceAlias $interface -AddressFamily IPv4 -ErrorAction Stop).IPAddress
+
+            if ($ip) {
+                return $ip
+            }
+        }
+        catch {
+            continue
+        }
     }
-
-    # Add more interfaces here
-    # if (-not $ip) {
-    #     $ip = (Get-NetIPAddress -InterfaceAlias "<interface-name>" -AddressFamily IPv4).IPAddress
-    # }
-
-    return $ip
 }
 
 
