@@ -18,7 +18,7 @@ function New-Pyvenv([string] $venvName) {
     }
 
     python -m venv $venvName
-    Activate-Pyvenv $venvName
+    Set-PyvenvActive $venvName
     python.exe -m pip install --upgrade pip
 }
 
