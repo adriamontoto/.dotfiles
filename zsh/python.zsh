@@ -36,7 +36,7 @@ function remove_pyvenv() {
         return
     fi
 
-    deactivate
+    deactivate || true
     rm -rf $venv_name
 }
 
