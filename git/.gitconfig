@@ -74,5 +74,5 @@
 [includeIf "gitdir:<path>"]
     path = ~/.dotfiles/git/profiles/work.gitconfig
 
-[includeIf "gitdir:/home"]
+[includeIf "gitdir:/home/"]
     path = ~/.dotfiles/git/profiles/linux.gitconfig
