@@ -35,18 +35,16 @@ function get_ip_address() {
 }
 
 function get_local_ip_address() {
-    ip=$(ip a show wlan0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
+    interfaces_to_check=("wlan0" "eth0")  # Add more interfaces if needed
 
-    if [ -z "$ip" ]; then
-        ip=$(ip a show eth0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
-    fi
+    for interface in "${interfaces_to_check[@]}"; do
+        ip=$(ip a show $interface 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
 
-    # Add more interfaces here
-    # if [ -z "$ip" ]; then
-    #     ip=$(ip a show <interface-name> | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
-    # fi
-
-    echo $ip
+        if [ -n "$ip" ]; then
+            echo $ip
+            return
+        fi
+    done
 }
 
 
