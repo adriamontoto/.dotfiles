@@ -71,6 +71,9 @@
 [color]
     ui = auto
 
+[rerere]
+	enabled = true
+
 [includeIf "gitdir:<path>"]
     path = ~/.dotfiles/git/profiles/work.gitconfig
 
