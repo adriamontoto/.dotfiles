@@ -1,19 +1,20 @@
 # Global Git Configuration
 
 [user]
-    name =
-    username =
-    email =
-	signingkey =
+	name =
+	username =
+	email =
+  	signingkey =
 
 [gpg]
-	# Windows
-	# program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
+  	format = ssh
 
-	# Linux
-	program = /usr/bin/gpg
+[gpg "ssh"]
+	program =
 
 [core]
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+
 	pager = more
 	editor = code --wait
 
@@ -43,7 +44,7 @@
 
 [commit]
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	pgsign = true
+	gpgsign = true
 
 [push]
 	default = simple
@@ -69,3 +70,9 @@
 
 [color]
     ui = auto
+
+[includeIf "gitdir:<path>"]
+    path = ~/.dotfiles/git/profiles/work.gitconfig
+
+[includeIf "gitdir:/home"]
+    path = ~/.dotfiles/git/profiles/linux.gitconfig
