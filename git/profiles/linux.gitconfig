@@ -1,0 +1,7 @@
+# Linux Git Configuration
+
+[gpg "ssh"]
+	program =
+
+[core]
+	sshCommand =
