@@ -9,6 +9,6 @@ ${function:gpull} = { git pull $args }
 ${function:gpush} = { git push $args }
 ${function:gforce} = { git push --force-with-lease $args }  # Force push, but only if the remote branch is the same as the local branch
 ${function:glog} = { git log --oneline --decorate --color }
-${function:gammend} = { git commit --amend --no-edit }  # Ammend the last chnage to the last commit
+${function:gamend} = { git commit --amend --no-edit }  # Amend the last chnage to the last commit
 ${function:gundo} = { git reset --soft HEAD~1 }  # Undo last commit
 ${function:gnuke} = { git clean -df; git reset --hard }  # Removes all untracked files and reset the repo to the last commit

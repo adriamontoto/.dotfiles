@@ -9,6 +9,6 @@ alias gpull='git pull'
 alias gpush='git push'
 alias gforce='git push --force-with-lease'  # Force push, but only if the remote branch is the same as the local branch
 alias glog='git log --oneline --decorate --color'
-alias gammend='git commit --amend --no-edit'  # Ammend the last chnage to the last commit
+alias gamend='git commit --amend --no-edit'  # Amend the last chnage to the last commit
 alias gundo='git reset --soft HEAD~1'  # Undo last commit
 alias gnuke='git clean -df; git reset --hard'  # Removes all untracked files and reset the repo to the last commit
