@@ -7,7 +7,6 @@ function activate_pyvenv() {
 
     if [ -d "$venv_name" ]; then
         source $venv_name/bin/activate
-        python -m pip install --upgrade pip
     fi
 }
 
