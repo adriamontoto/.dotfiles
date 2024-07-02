@@ -40,7 +40,7 @@ ignore = [
 ]
 
 [lint.per-file-ignores]
-'_init_.py' = [
+'__init__.py' = [
     'F401',  # Checks for unused imports.
     'D104',  # Checks for undocumented public package definitions.
 ]
