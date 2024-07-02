@@ -43,6 +43,9 @@ ignore = [
     'F401',  # Checks for unused imports.
     'D104',  # Checks for undocumented public package definitions.
 ]
+'database.py' = [
+    'F401',  # Checks for unused imports.
+]
 
 [lint.mccabe]
 max-complexity = 5
