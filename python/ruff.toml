@@ -27,7 +27,6 @@ select = [
     'SIM',  # flake8-simplify
     'RUF',  # ruff
 ]
-
 ignore = [
     'E111',  # Checks for indentation with a non-multiple of 4 spaces.
     'E114',  # Checks for indentation of comments with a non-multiple of 4 spaces.
