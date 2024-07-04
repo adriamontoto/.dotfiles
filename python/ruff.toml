@@ -48,6 +48,9 @@ ignore = [
 'database.py' = [
     'F401',  # Checks for unused imports.
 ]
+'**test**.py' = [
+    'S101',  # Use of `assert` detected.
+]
 
 [lint.mccabe]
 max-complexity = 5
