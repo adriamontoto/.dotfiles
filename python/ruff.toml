@@ -33,6 +33,7 @@ ignore = [
     'E117',  # Checks for over-indented code.
     'W191',  # Checks for indentation that uses tabs.
     'D200',  # Checks for single-line docstrings that are broken across multiple lines.
+    'D205',  # 1 blank line required between summary line and description.
     'D206',  # Checks for docstrings that are indented with tabs.
     'D212',  # Checks for docstring summary lines that are not positioned on the first physical line of the docstring.
     'D401',  # First line of docstring should be in imperative mood.
