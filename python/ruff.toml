@@ -62,6 +62,7 @@ property-decorators = ['sqlalchemy.ext.hybrid.hybrid_property']
 [lint.pep8-naming]
 classmethod-decorators = [
     'pydantic.field_validator',  # Allow Pydantic's @field_validator decorator to trigger class method treatment.
+    'pydantic.model_validator',  # Allow Pydantic's @model_validator decorator to trigger class method treatment.
     'declared_attr',  # Allow SQLAlchemy's dynamic decorators, like @field.expression, to trigger class method treatment.
     'expression',  # Allow SQLAlchemy's dynamic decorators, like @field.expression, to trigger class method treatment.
     'comparator',  # Allow SQLAlchemy's dynamic decorators, like @field.expression, to trigger class method treatment.
