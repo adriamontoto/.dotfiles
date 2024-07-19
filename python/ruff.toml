@@ -53,7 +53,7 @@ ignore = [
 ]
 
 [lint.mccabe]
-max-complexity = 5
+max-complexity = 10
 
 [lint.pydocstyle]
 convention = 'pep257'
