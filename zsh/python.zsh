@@ -70,3 +70,6 @@ alias pipi='pip install'
 alias pipu='pip uninstall'
 alias pips='pip show'
 alias pipl='pip list'
+
+# Disable globbing for pip
+alias pip='noglob pip'
