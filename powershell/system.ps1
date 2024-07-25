@@ -19,7 +19,10 @@ function New-File() {
 Set-Alias -Name l -Value Get-ChildItem
 Set-Alias -Name ll -Value Get-ChildItem
 Set-Alias -Name la -Value Get-ChildItem
-Set-Alias -Name lla -Value Get-ChildItem
+Set-Alias -Name lr -Value Get-ChildItem
+Set-Alias -Name lra -Value Get-ChildItem
+Set-Alias -Name lt -Value Get-ChildItem
+Set-Alias -Name lta -Value Get-ChildItem
 
 ${function:cll} = { clear; Get-ChildItem }
 

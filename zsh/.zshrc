@@ -7,13 +7,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-source $ZSH/oh-my-zsh.sh
-
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -35,13 +32,6 @@ export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 
 #############################################
-################## ALIASES ##################
-#############################################
-source ~/.dotfiles/zsh/git.zsh
-source ~/.dotfiles/zsh/python.zsh
-source ~/.dotfiles/zsh/system.zsh
-
-#############################################
 ################## PLUGINS ##################
 #############################################
 # TODO: install syntax-highlighting: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
@@ -51,3 +41,12 @@ plugins=(sudo
 	     command-not-found
          zsh-syntax-highlighting
          zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
+#############################################
+################## ALIASES ##################
+#############################################
+source ~/.dotfiles/zsh/git.zsh
+source ~/.dotfiles/zsh/python.zsh
+source ~/.dotfiles/zsh/system.zsh
