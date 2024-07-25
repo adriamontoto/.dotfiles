@@ -7,6 +7,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+source $ZSH/oh-my-zsh.sh
+
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
@@ -49,5 +51,3 @@ plugins=(sudo
 	     command-not-found
          zsh-syntax-highlighting
          zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
