@@ -8,6 +8,14 @@ function freverse_search() {
   LBUFFER=$selected_command
 }
 
+function fkill() {
+    pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+
+    if [ -n "$pid" ]; then
+        LBUFFER="sudo kill -9 $pid"
+    fi
+}
+
 
 # System Aliases
 alias l='exa --sort Name'
@@ -38,6 +46,9 @@ alias reload='exec $SHELL -l'
 
 zle -N freverse_search
 bindkey '^r' freverse_search
+
+zle -N fkill
+bindkey '^k' fkill
 
 
 # Extra Functions
