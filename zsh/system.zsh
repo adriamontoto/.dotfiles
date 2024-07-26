@@ -8,6 +8,21 @@ function freverse_search() {
   LBUFFER=$selected_command
 }
 
+function fsearch_preview() {  
+    IGNORED_FILES=(-not -name '*.pyc' -not -name '*.pyo' -not -name '*.pyi' -not -name '*.pyd')
+    IGNORED_FOLDERS=(-not -path '.' -not -path '**venv**' -not -path '**cache**' -not -path '**.git**' -not -path '**node_modules**')
+
+    selected_command=$(find . -type f "${IGNORED_FILES[@]}" "${IGNORED_FOLDERS[@]}" -o -type d "${IGNORED_FOLDERS[@]}" | fzf --prompt='Search> ' --query='' --preview '
+        if [[ -d {} ]]; then
+            exa --sort Name --long --all {}
+        else
+            batcat --theme=OneHalfDark  --style=numbers --color=always --line-range=:500 {}
+        fi
+    ')
+
+    RBUFFER=$selected_command
+}
+
 function fkill() {
     pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
 
@@ -46,6 +61,9 @@ alias reload='exec $SHELL -l'
 
 zle -N freverse_search
 bindkey '^r' freverse_search
+
+zle -N fsearch_preview
+bindkey '^f' fsearch_preview
 
 zle -N fkill
 bindkey '^k' fkill
