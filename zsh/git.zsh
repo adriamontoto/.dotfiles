@@ -1,4 +1,13 @@
 # Git Functions
+function change_branch() {
+  branch=$(git branch --all | grep -v '\->' | sed 's/^..//' | fzf --preview '
+    git log --oneline --graph --color=always {} | head -100
+  ' --preview-window=right:70%)
+
+  if [[ -n "$branch" ]]; then
+    git checkout "$branch"
+  fi
+}
 
 
 # Git Aliases
@@ -7,6 +16,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gpull='git pull'
 alias gpush='git push'
+alias gbranch='change_branch'
 alias gforce='git push --force-with-lease'  # Force push, but only if the remote branch is the same as the local branch
 alias glog='git log --oneline --decorate --color'
 alias gamend='git commit --amend --no-edit'  # Amend the last chnage to the last commit
