@@ -3,6 +3,11 @@ function mkd() {
     mkdir -p $1 && cd $1
 }
 
+function freverse_search() {
+  selected_command=$(fc -rl 1 | awk '{$1="";print substr($0,2)}' | awk '!seen[$0]++' | fzf)
+  LBUFFER=$selected_command
+}
+
 
 # System Aliases
 alias l='exa --sort Name'
@@ -30,6 +35,9 @@ alias downloads='cd ~/downloads'
 alias dotfiles='cd ~/.dotfiles'
 
 alias reload='exec $SHELL -l'
+
+zle -N freverse_search
+bindkey '^r' freverse_search
 
 
 # Extra Functions
