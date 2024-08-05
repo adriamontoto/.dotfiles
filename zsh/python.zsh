@@ -20,9 +20,9 @@ function create_pyvenv() {
         return
     fi
 
-    python3 -m venv $venv_name
+    python3.12 -m venv $venv_name
     activate_pyvenv $venv_name
-    python -m pip install --upgrade pip
+    python3.12 -m pip install --upgrade pip
 }
 
 function remove_pyvenv() {
@@ -45,7 +45,7 @@ function install_requirements() {
         requirements_file="requirements.txt"
     fi
 
-    pip install -r $requirements_file
+    python3.12 -m pip install -r $requirements_file
 }
 
 function install_dev_requirements() {
@@ -54,9 +54,9 @@ function install_dev_requirements() {
 
 
 # Python aliases
-alias py='python3'
-alias python='python3'
-alias pip='pip3'
+alias py='python3.12'
+alias python='python3.12'
+alias pip='noglob python3.12 -m pip'
 alias create='create_pyvenv'
 alias activate='activate_pyvenv'
 # deactivate is a built-in command in Python
@@ -70,6 +70,3 @@ alias pipi='pip install'
 alias pipu='pip uninstall'
 alias pips='pip show'
 alias pipl='pip list'
-
-# Disable globbing for pip
-alias pip='noglob pip'
