@@ -8,8 +8,8 @@ The main aim 🎯 of this repository is to enable to set up a new machine quickl
 
 
 ## Table of Contents
-- [Installation](#📥-installation)
-- [License](#🔑-license)
+- [📥 Installation](#installation)
+- [🔑 License](#license)
 <br><br>
 
 <p align="right">
@@ -17,6 +17,7 @@ The main aim 🎯 of this repository is to enable to set up a new machine quickl
 </p>
 
 
+<a name="installation"></a>
 ## 📥 Installation
 1. 🌱 Clone the repository at your home directory
 ```bash
@@ -51,6 +52,7 @@ In Windows systems:
 </p>
 
 
+<a name="license"></a>
 ## 🔑 License
 This project is licensed under the terms of the [MIT license](https://choosealicense.com/licenses/mit/).
 <br><br>
