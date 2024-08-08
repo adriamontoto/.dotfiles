@@ -14,7 +14,7 @@ The main aim 🎯 of this repository is to enable to set up a new machine quickl
 ## Installation
 1. Clone the repository at your home directory
 ```bash
-git clone git@github.com:adriamontoto/dotfiles.git ~/.dotfiles
+git clone git@github.com:adriamontoto/.dotfiles.git ~/.dotfiles
 ```
 <br>
 
