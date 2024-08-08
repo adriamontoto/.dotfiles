@@ -6,25 +6,26 @@ The main aim 🎯 of this repository is to enable to set up a new machine quickl
 
 
 ## Table of Contents
-- [Installation](#installation)
-- [License](#license)
+- [Installation](#📥-installation)
+- [License](#🔑-license)
 <br><br>
 
 
-## Installation
-1. Clone the repository at your home directory
+
+## 📥 Installation
+1. 🌱 Clone the repository at your home directory
 ```bash
 git clone git@github.com:adriamontoto/.dotfiles.git ~/.dotfiles
 ```
 <br>
 
-2. Change directory to the project folder
+2. 🚶🏻 Change directory to the project folder
 ```bash
 cd ~/.dotfiles
 ```
 <br>
 
-3. Run the installation script depending on your operating system
+3. 🚀 Run the installation script depending on your operating system
 > [!WARNING]
 > **Currently there is no installation script so you will have to manually copy the files to the correct location or create symlinks.**
 
@@ -41,5 +42,5 @@ In Windows systems:
 <br><br>
 
 
-## License
+## 🔑 License
 This project is licensed under the terms of the [MIT license](https://choosealicense.com/licenses/mit/).
