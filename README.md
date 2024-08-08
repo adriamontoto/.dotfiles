@@ -24,8 +24,9 @@ cd ~/.dotfiles
 ```
 <br>
 
-3. Run the installation script depending on your operating system<br>
-**Currently there is no installation script so you will have to manually copy the files to the correct location or create symlinks.**
+3. Run the installation script depending on your operating system
+> [!WARNING]
+> **Currently there is no installation script so you will have to manually copy the files to the correct location or create symlinks.**
 
 In unix systems:
 ```bash
