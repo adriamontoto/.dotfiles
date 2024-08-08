@@ -5,7 +5,7 @@ function change_branch() {
   ' --preview-window=right:70%)
 
   if [[ -n "$branch" ]]; then
-    git checkout "$branch"
+    git switch "$branch"
   fi
 }
 
