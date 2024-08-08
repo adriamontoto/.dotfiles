@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 # My dotfiles 🐣💻
 My dotfiles repository is a collection of configuration files designed to personalize and enhance my development environment. It serves as a toolbox 🧰 for customizing the shell, editor, and various tools, streamlining workflows, and boosting productivity 📈.
 
@@ -10,6 +12,9 @@ The main aim 🎯 of this repository is to enable to set up a new machine quickl
 - [License](#🔑-license)
 <br><br>
 
+<p align="right">
+    <a href="#readme-top">🔼 Back to top</a>
+</p>
 
 
 ## 📥 Installation
@@ -41,6 +46,15 @@ In Windows systems:
 ```
 <br><br>
 
+<p align="right">
+    <a href="#readme-top">🔼 Back to top</a>
+</p>
+
 
 ## 🔑 License
 This project is licensed under the terms of the [MIT license](https://choosealicense.com/licenses/mit/).
+<br><br>
+
+<p align="right">
+    <a href="#readme-top">🔼 Back to top</a>
+</p>
