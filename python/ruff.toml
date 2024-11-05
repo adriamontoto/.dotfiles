@@ -12,20 +12,20 @@ skip-magic-trailing-comma = false
 
 [lint]
 select = [
-    'F',  # pyflakes
-    'E',  # pycodestyle
-    'W',  # pycodestyle
-    'D',  # pydocstyle
-    'C90',  # mccabe
-    'I',  # isort
-    'N',  # pep8-naming
+    'F',   # pyflakes
+    'E',   # pycodestyle
+    'W',   # pycodestyle
+    'D',   # pydocstyle
+    'C90', # mccabe
+    'I',   # isort
+    'N',   # pep8-naming
     'UP',  # pyupgrade
-    'B',  # flake8-bugbear
+    'B',   # flake8-bugbear
     'C4',  # flake8-comprehensions
-    'DTZ',  # flake8-datetimez
-    'S',  # flake8-bandit
-    'SIM',  # flake8-simplify
-    'RUF',  # ruff
+    'DTZ', # flake8-datetimez
+    'S',   # flake8-bandit
+    'SIM', # flake8-simplify
+    'RUF', # ruff
 ]
 ignore = [
     'E111',  # Checks for indentation with a non-multiple of 4 spaces.
@@ -42,14 +42,14 @@ ignore = [
 
 [lint.per-file-ignores]
 '__init__.py' = [
-    'F401',  # Checks for unused imports.
-    'D104',  # Checks for undocumented public package definitions.
+    'F401', # Checks for unused imports.
+    'D104', # Checks for undocumented public package definitions.
 ]
 'database.py' = [
-    'F401',  # Checks for unused imports.
+    'F401', # Checks for unused imports.
 ]
 '**test**.py' = [
-    'S101',  # Use of `assert` detected.
+    'S101', # Use of `assert` detected.
 ]
 
 [lint.mccabe]
@@ -61,11 +61,11 @@ property-decorators = ['sqlalchemy.ext.hybrid.hybrid_property']
 
 [lint.pep8-naming]
 classmethod-decorators = [
-    'pydantic.field_validator',  # Allow Pydantic's @field_validator decorator to trigger class method treatment.
-    'pydantic.model_validator',  # Allow Pydantic's @model_validator decorator to trigger class method treatment.
-    'declared_attr',  # Allow SQLAlchemy's dynamic decorators, like @field.expression, to trigger class method treatment.
-    'expression',  # Allow SQLAlchemy's dynamic decorators, like @field.expression, to trigger class method treatment.
-    'comparator',  # Allow SQLAlchemy's dynamic decorators, like @field.expression, to trigger class method treatment.
+    'pydantic.field_validator', # Allow Pydantic's @field_validator decorator to trigger class method treatment.
+    'pydantic.model_validator', # Allow Pydantic's @model_validator decorator to trigger class method treatment.
+    'declared_attr',            # Allow SQLAlchemy's dynamic decorators, like @field.expression, to trigger class method treatment.
+    'expression',               # Allow SQLAlchemy's dynamic decorators, like @field.expression, to trigger class method treatment.
+    'comparator',               # Allow SQLAlchemy's dynamic decorators, like @field.expression, to trigger class method treatment.
 ]
 
 [lint.flake8-bugbear]
