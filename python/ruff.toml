@@ -28,6 +28,8 @@ select = [
     'RUF', # ruff
 ]
 ignore = [
+    'UP035', # Checks for uses of deprecated imports based on the minimum supported Python version.
+    'UP036', # Checks for conditional blocks gated on sys.version_info comparisons that are outdated for the minimum supported Python version.
     'E111',  # Checks for indentation with a non-multiple of 4 spaces.
     'E114',  # Checks for indentation of comments with a non-multiple of 4 spaces.
     'E117',  # Checks for over-indented code.
