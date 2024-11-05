@@ -31,6 +31,14 @@ function fkill() {
     fi
 }
 
+function jump_code() {
+    j $1 && code .
+}
+
+function jump_code_exit() {
+    j $1 && code . && exit
+}
+
 
 # System Aliases
 alias l='exa --sort Name'
@@ -58,6 +66,9 @@ alias downloads='cd ~/downloads'
 alias dotfiles='cd ~/.dotfiles'
 
 alias reload='exec $SHELL -l'
+
+alias c='jump_code'
+alias ce='jump_code_exit'
 
 zle -N freverse_search
 bindkey '^r' freverse_search
