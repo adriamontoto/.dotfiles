@@ -14,7 +14,7 @@ function fsearch_preview() {
 
     selected_command=$(find . -type f "${IGNORED_FILES[@]}" "${IGNORED_FOLDERS[@]}" -o -type d "${IGNORED_FOLDERS[@]}" | fzf --prompt='Search> ' --query='' --preview '
         if [[ -d {} ]]; then
-            exa --sort Name --long --all {}
+            eza --sort Name --long --all {}
         else
             batcat --theme=OneHalfDark  --style=numbers --color=always --line-range=:500 {}
         fi
@@ -41,13 +41,13 @@ function jump_code_exit() {
 
 
 # System Aliases
-alias l='exa --sort Name'
-alias ll='exa --sort Name --long'
-alias la='exa --sort Name --long --all'
-alias lr='exa --sort Name --long --recurse'
-alias lra='exa --sort Name --long --recurse --all'
-alias lt="exa --sort Name --long --tree"
-alias lta="exa --sort Name --long --tree --all"
+alias l='eza --sort Name'
+alias ll='eza --sort Name --long'
+alias la='eza --sort Name --long --all'
+alias lr='eza --sort Name --long --recurse'
+alias lra='eza --sort Name --long --recurse --all'
+alias lt="eza --sort Name --long --tree"
+alias lta="eza --sort Name --long --tree --all"
 
 alias cls='clear'
 alias cll='clear;ll'
