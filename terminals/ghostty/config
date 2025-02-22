@@ -1,0 +1,69 @@
+# Font
+font-family = Cascadia Code NF
+font-size = 15
+font-thicken = false
+font-style-bold = false
+font-style-bold-italic = false
+adjust-cell-height = 5
+
+# UI
+window-width = 90
+window-height = 20
+window-padding-balance = true
+mouse-hide-while-typing = true
+
+# Cursor
+cursor-color = DCDFE4
+cursor-style = block
+cursor-style-blink = true
+cursor-click-to-move = true
+adjust-cursor-thickness = 20
+
+# Theme
+foreground = DCDFE4
+background = 282C34
+background-opacity = 0.9
+background-blur = 20
+background-blur-radius = 10
+unfocused-split-opacity = 0.5
+unfocused-split-fill = 2D2D2D
+palette = 0=#282C34
+palette = 1=#E06C75
+palette = 2=#98C379
+palette = 3=#E5C07B
+palette = 4=#61AFEF
+palette = 5=#C678DD
+palette = 6=#56B6C2
+palette = 7=#DCDFE4
+palette = 8=#686868
+palette = 9=#E06C75
+palette = 10=#98C379
+palette = 11=#E5C07B
+palette = 12=#61AFEF
+palette = 13=#C678DD
+palette = 14=#56B6C2
+palette = 15=#DCDFE4
+
+# Window
+window-inherit-font-size = true
+window-new-tab-position = end
+window-save-state = always
+window-padding-x = 5
+window-padding-y = 2,10
+macos-icon = retro
+macos-titlebar-proxy-icon = hidden
+title = " "
+
+# Features
+link-url = true
+auto-update = download
+auto-update = check
+copy-on-select = false
+#working-directory = home
+
+# Keybinds
+keybind = command+shift+n=new_tab
+keybind = command+w=close_tab
+keybind = command+option+left=previous_tab
+keybind = command+option+right=next_tab
+keybind = command+option+n=new_split:right
