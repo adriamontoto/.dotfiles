@@ -56,7 +56,6 @@ function Install-DevRequirements() {
 # Python aliases
 Set-Alias -Name py -Value python
 Set-Alias -Name python3 -Value python
-
 Set-Alias -Name create -Value New-Pyvenv
 Set-Alias -Name activate -Value Set-PyvenvActive
 # deactivate is a built-in command in Python
@@ -65,8 +64,3 @@ Set-Alias -Name remove -Value Remove-Pyvenv
 Set-Alias -Name install -Value Install-DevRequirements
 Set-Alias -Name installr -Value Install-Requirements
 Set-Alias -Name installd -Value Install-DevRequirements
-
-${function:pipi} = { pip install $args }
-${function:pipu} = { pip uninstall $args }
-${function:pips} = { pip show $args }
-${function:pipl} = { pip list }
