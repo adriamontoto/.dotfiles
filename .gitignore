@@ -1,4 +1,6 @@
 #################### Files to exclude ####################
+# PyPI files
+.pypirc
 
 ################### Folders to exclude ###################
 # IDE folders
