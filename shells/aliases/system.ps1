@@ -48,7 +48,7 @@ ${function:cwd} = { (Get-Location).Path | Set-Clipboard }
 
 # Extra functions
 function Get-IpAddress() {
-    (Resolve-DnsName -Name myip.opendns.com -Server resolver1.opendns.com).IPAddress
+    return (Invoke-RestMethod -Uri "https://ifconfig.co/json").ip
 }
 
 function Get-LocalIpAddress() {
