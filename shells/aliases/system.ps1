@@ -72,3 +72,6 @@ function Get-LocalIpAddress() {
 # Extra aliases
 Set-Alias -Name myip -Value Get-IpAddress
 Set-Alias -Name localip -Value Get-LocalIpAddress
+
+Set-Alias -Name bat -Value cat
+Set-Alias -Name dog -Value cat
