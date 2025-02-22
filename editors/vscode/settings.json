@@ -312,6 +312,8 @@
     "diffEditor.ignoreTrimWhitespace": true
   },
 
+  "ruff.configuration": "~/.dotfiles/languages/python/ruff.toml",
+
   "autoDocstring.startOnNewLine": true,
 
   "notebook.formatOnCellExecution": true,
