@@ -25,7 +25,7 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSaveMode": "file",
   "editor.fontLigatures": true,
-  "editor.fontFamily": "Cascadia Code",
+  "editor.fontFamily": "Cascadia Code NF",
   "editor.quickSuggestionsDelay": 0,
   "editor.largeFileOptimizations": false,
   "editor.minimap.enabled": false,
@@ -147,7 +147,7 @@
   "path-intellisense.showHiddenFiles": true,
   "path-intellisense.autoSlashAfterDirectory": true,
 
-  "terminal.integrated.fontFamily": "Cascadia Code",
+  "terminal.integrated.fontFamily": "Cascadia Code NF",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyleInactive": "block",
   "terminal.integrated.gpuAcceleration": "off",
