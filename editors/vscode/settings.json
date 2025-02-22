@@ -5,6 +5,8 @@
 
   "breadcrumbs.symbolPath": "off",
 
+  "telemetry.telemetryLevel": "off",
+
   "extensions.ignoreRecommendations": true,
 
   "security.workspace.trust.untrustedFiles": "open",
