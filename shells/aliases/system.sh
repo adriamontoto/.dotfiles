@@ -78,8 +78,29 @@ bindkey '^k' fkill
 
 
 # Extra functions
+function copy() {
+    local input=$1
+
+    if [ -z "${input}" ]; then
+        input=$(cat)
+    fi
+
+    if command -v pbcopy &> /dev/null; then
+        echo -n "${input}" | pbcopy &> /dev/null  # macOS
+
+    elif command -v clip.exe &> /dev/null; then
+        echo -n "${input}" | clip.exe &> /dev/null  # WSL
+
+    else
+        echo "Error: No clipboard utility found!" >&2
+        return 1
+    fi
+}
+
 function get_ip_address() {
-    curl ifconfig.co
+    ip=$(curl -s ifconfig.co)
+    echo "${ip}" | copy
+    echo "${ip}"
 }
 
 function get_local_ip_address() {
@@ -89,14 +110,15 @@ function get_local_ip_address() {
         ip=$(ip a show $interface 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
 
         if [ -n "$ip" ]; then
-            echo $ip
+            echo "${ip}" | copy
+            echo "${ip}"
             return
         fi
     done
 }
 
 
-# Extra Aliases
+# Extra aliases
 alias myip="get_ip_address"
 alias localip="get_local_ip_address"
 
