@@ -48,7 +48,10 @@ ${function:cwd} = { (Get-Location).Path | Set-Clipboard }
 
 # Extra functions
 function Get-IpAddress() {
-    return (Invoke-RestMethod -Uri "https://ifconfig.co/json").ip
+    $ip = (Invoke-RestMethod -Uri "https://ifconfig.co/json").ip
+    $ip | Set-Clipboard
+
+    return $ip
 }
 
 function Get-LocalIpAddress() {
@@ -59,6 +62,8 @@ function Get-LocalIpAddress() {
             $ip = (Get-NetIPAddress -InterfaceAlias $interface -AddressFamily IPv4 -ErrorAction Stop).IPAddress
 
             if ($ip) {
+                $ip | Set-Clipboard
+
                 return $ip
             }
         }
