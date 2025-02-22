@@ -1,0 +1,7 @@
+* text=auto
+
+*.json diff=json
+*.md diff=markdown
+*.csv diff=csv
+*.png diff=exif
+*.jpg diff=exif

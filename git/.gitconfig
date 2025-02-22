@@ -1,25 +1,23 @@
-# Global Git Configuration
-
 [user]
 	name =
 	username =
 	email =
-  	signingkey =
+	signingkey =
 
 [gpg]
-  	format = ssh
+	format = ssh
 
 [gpg "ssh"]
 	program =
 
 [core]
-	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+	sshCommand =
 
 	pager = more
 	editor = code --wait
 
-    excludesfile = ~/.gitignore
-    attributesfile = ~/.gitattributes
+	excludesfile = ~/.dotfiles/git/.gitignore_global
+	attributesfile = ~/.dotfiles/git/.gitattributes_global
 
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
@@ -73,9 +71,3 @@
 
 [rerere]
 	enabled = true
-
-[includeIf "gitdir:<path>"]
-    path = ~/.dotfiles/git/profiles/work.gitconfig
-
-[includeIf "gitdir:/home/"]
-    path = ~/.dotfiles/git/profiles/linux.gitconfig
