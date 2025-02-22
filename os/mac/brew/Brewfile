@@ -1,0 +1,48 @@
+# Repositories
+tap "homebrew/bundle"
+
+# Formulas
+brew "autojump"
+brew "awscli"
+brew "bash"
+brew "bat"
+brew "bruno"
+brew "curl"
+brew "eza"
+brew "fzf"
+brew "git"
+brew "htop"
+brew "make"
+brew "mas"
+brew "nano"
+brew "ollama"
+brew "openssl@3"
+brew "python@3.13"
+brew "speedtest-cli"
+brew "tree"
+brew "wget"
+brew "xz"
+brew "zsh"
+
+# GUI APPs
+cask "brave-browser"
+cask "discord"
+cask "displaylink"
+cask "docker"
+cask "drawio"
+cask "ghostty"
+cask "google-chrome"
+cask "jetbrains-toolbox"
+cask "logi-options+"
+cask "obsidian"
+cask "raycast"
+cask "spotify"
+cask "visual-studio-code"
+cask "vlc"
+cask "whatsapp"
+cask "wireshark"
+
+# Mac App Store APPs
+mas "1Password 7", id: 1333542190
+mas "Amphetamine", id: 937984704
+mas "Prime Video", id: 545519333
