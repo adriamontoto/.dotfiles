@@ -9,6 +9,7 @@
 
 [gpg "ssh"]
 	program =
+	allowedSignersFile = ~/.ssh/allowed_signers
 
 [core]
 	sshCommand =
