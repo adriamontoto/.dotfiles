@@ -14,7 +14,7 @@
 [core]
 	sshCommand =
 
-	pager = more -R
+	pager = less -R
 	editor = code --wait
 
 	excludesfile = ~/.dotfiles/git/.gitignore_global
