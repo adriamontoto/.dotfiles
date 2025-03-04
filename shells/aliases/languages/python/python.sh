@@ -1,23 +1,25 @@
 # Python functions
 function activate_pyvenv() {
-    local venv_name=$1
-    if [ -z "${venv_name}" ]; then
+    local venv_name="${1}"
+    if [[ -z "${venv_name}" ]]; then
         venv_name=".venv"
     fi
 
-    if [ -d "${venv_name}" ]; then
-        source "${venv_name}/bin/activate"
+    if [[ ! -d "${venv_name}" ]]; then
+        return 1
     fi
+
+    source "${venv_name}/bin/activate"
 }
 
 function create_pyvenv() {
-    local venv_name=$1
-    if [ -z "${venv_name}" ]; then
+    local venv_name="${1}"
+    if [[ -z "${venv_name}" ]]; then
         venv_name=".venv"
     fi
 
-    if [ -d "${venv_name}" ]; then
-        return
+    if [[ -d "${venv_name}" ]]; then
+        return 1
     fi
 
     python -m venv "${venv_name}"
@@ -26,13 +28,13 @@ function create_pyvenv() {
 }
 
 function remove_pyvenv() {
-    local venv_name=$1
-    if [ -z "${venv_name}" ]; then
+    local venv_name="${1}"
+    if [[ -z "${venv_name}" ]]; then
         venv_name=".venv"
     fi
 
-    if [ ! -d "${venv_name}" ]; then
-        return
+    if [[ ! -d "${venv_name}" ]]; then
+        return 1
     fi
 
     deactivate || true
@@ -40,8 +42,8 @@ function remove_pyvenv() {
 }
 
 function install_requirements() {
-    local requirements_file=$1
-    if [ -z "${requirements_file}" ]; then
+    local requirements_file="${1}"
+    if [[ -z "${requirements_file}" ]]; then
         requirements_file="requirements.txt"
     fi
 
@@ -51,7 +53,6 @@ function install_requirements() {
 function install_dev_requirements() {
     install_requirements "requirements_dev.txt"
 }
-
 
 # Python aliases
 alias py="python3.13"
