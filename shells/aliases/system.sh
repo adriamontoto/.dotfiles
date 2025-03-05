@@ -4,7 +4,16 @@ function mkd() {
 }
 
 function freverse_search() {
-    LBUFFER=$(fc -rl 1 | awk '{$1="";print substr($0,2)}' | awk '!seen[$0]++' | fzf)
+    LBUFFER=$(
+        fc -rl 1 |
+            awk '{$1="";print substr($0,2)}' |
+            awk '!seen[$0]++' |
+            fzf \
+                --cycle \
+                --border \
+                --prompt="Execute> " \
+                --layout="reverse-list"
+    )
 }
 
 function fsearch_preview() {
@@ -21,11 +30,24 @@ function fsearch_preview() {
 }
 
 function fkill() {
-    pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+    local pid=$(
+        ps -ef |
+            fzf \
+                --tac \
+                --cycle \
+                --exact \
+                --border \
+                --header-lines=1 \
+                --layout="reverse-list" \
+                --prompt="Kill Process> " |
+            awk '{print $2}'
+    )
 
-    if [ -n "${pid}" ]; then
-        LBUFFER="sudo kill -9 ${pid}"
+    if [[ -z "${pid}" ]]; then
+        return 1
     fi
+
+    LBUFFER="sudo kill -9 ${pid}"
 }
 
 function jump_code() {
