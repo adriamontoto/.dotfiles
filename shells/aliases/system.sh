@@ -77,9 +77,9 @@ bindkey '^k' fkill
 
 # Extra functions
 function copy() {
-    local input=$1
+    local input="${1}"
 
-    if [ -z "${input}" ]; then
+    if [[ -z "${input}" ]]; then
         input=$(cat)
     fi
 
@@ -93,6 +93,12 @@ function copy() {
         echo "Error: No clipboard utility found!" >&2
         return 1
     fi
+}
+
+function now() {
+    now=$(date "+%Y-%m-%dT%H:%M:%S")
+    echo "${now}" | copy
+    echo "${now}"
 }
 
 function get_ip_address() {
