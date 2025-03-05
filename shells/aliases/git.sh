@@ -15,7 +15,6 @@ function switch_branch() {
             grep -v '^(HEAD' |
             fzf \
                 --ansi \
-                --cycle \
                 --border \
                 --no-sort \
                 --layout="reverse-list" \
@@ -48,7 +47,6 @@ function checkout_commit() {
             sed "/^${current_commit}/ s/.*/\x1b[1;32m&\x1b[0m/" |
             fzf \
                 --ansi \
-                --cycle \
                 --border \
                 --no-sort \
                 --layout="reverse-list" \
