@@ -4,10 +4,10 @@ function mkd() {
 }
 
 function freverse_search() {
-  LBUFFER=$(fc -rl 1 | awk '{$1="";print substr($0,2)}' | awk '!seen[$0]++' | fzf)
+    LBUFFER=$(fc -rl 1 | awk '{$1="";print substr($0,2)}' | awk '!seen[$0]++' | fzf)
 }
 
-function fsearch_preview() {  
+function fsearch_preview() {
     IGNORED_FILES=(-not -name '.pyc' -not -name '.pyo' -not -name '.pyi' -not -name '.pyd')
     IGNORED_FOLDERS=(-not -path '.' -not -path '*venv' -not -path 'cache' -not -path '.git' -not -path 'node_modules*')
 
@@ -35,7 +35,6 @@ function jump_code() {
 function jump_code_exit() {
     j $1 && code . && exit
 }
-
 
 # System aliases
 alias l="eza --sort Name"
@@ -76,7 +75,6 @@ bindkey '^f' fsearch_preview
 zle -N fkill
 bindkey '^k' fkill
 
-
 # Extra functions
 function copy() {
     local input=$1
@@ -85,11 +83,11 @@ function copy() {
         input=$(cat)
     fi
 
-    if command -v pbcopy &> /dev/null; then
-        echo -n "${input}" | pbcopy &> /dev/null  # macOS
+    if command -v pbcopy &>/dev/null; then
+        echo -n "${input}" | pbcopy &>/dev/null # macOS
 
-    elif command -v clip.exe &> /dev/null; then
-        echo -n "${input}" | clip.exe &> /dev/null  # WSL
+    elif command -v clip.exe &>/dev/null; then
+        echo -n "${input}" | clip.exe &>/dev/null # WSL
 
     else
         echo "Error: No clipboard utility found!" >&2
@@ -102,8 +100,6 @@ function get_ip_address() {
     echo "${ip}" | copy
     echo "${ip}"
 }
-
-
 
 # Extra aliases
 alias myip="get_ip_address"
