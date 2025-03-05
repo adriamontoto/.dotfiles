@@ -104,7 +104,13 @@ function get_ip_address() {
 # Extra aliases
 alias myip="get_ip_address"
 
-alias bat="batcat"
-alias cat="bat"
-alias dog="bat"
+if command -v bat &>/dev/null; then
+    alias cat="bat"
+fi
+
+if command -v batcat &>/dev/null; then
+    alias cat="batcat"
+fi
+
+alias dog="cat"
 alias please="sudo"
