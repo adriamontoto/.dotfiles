@@ -103,24 +103,10 @@ function get_ip_address() {
     echo "${ip}"
 }
 
-function get_local_ip_address() {
-    INTERFACES_TO_CHECK=("wlan0" "eth0")  # Add more interfaces if needed
-
-    for interface in "${INTERFACES_TO_CHECK[@]}"; do
-        ip=$(ip a show $interface 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
-
-        if [ -n "$ip" ]; then
-            echo "${ip}" | copy
-            echo "${ip}"
-            return
-        fi
-    done
-}
 
 
 # Extra aliases
 alias myip="get_ip_address"
-alias localip="get_local_ip_address"
 
 alias bat="batcat"
 alias cat="bat"
