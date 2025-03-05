@@ -76,6 +76,19 @@ zle -N fkill
 bindkey '^k' fkill
 
 # Extra functions
+function update() {
+    if command -v brew &>/dev/null; then
+        brew update && brew upgrade # macOS
+
+    elif command -v apt &>/dev/null; then
+        sudo apt update && sudo apt upgrade -y # debian
+
+    else
+        echo "Error: No package manager found!" >&2
+        return 1
+    fi
+}
+
 function copy() {
     local input="${1}"
 
