@@ -37,13 +37,13 @@ function jump_code_exit() {
 }
 
 # System aliases
-alias l="eza --sort Name"
-alias ll="eza --sort Name --long"
-alias la="eza --sort Name --long --all"
-alias lr="eza --sort Name --long --recurse"
-alias lra="eza --sort Name --long --recurse --all"
-alias lt="eza --sort Name --long --tree"
-alias lta="eza --sort Name --long --tree --all"
+alias l="eza --sort Name --group-directories-last --icons"
+alias ll="eza --sort Name --long --group-directories-last --icons"
+alias la="eza --sort Name --long --all --group-directories-last --icons"
+alias lr="eza --sort Name --long --recurse --group-directories-last --icons"
+alias lra="eza --sort Name --long --recurse --all --group-directories-last --icons"
+alias lt="eza --sort Name --long --tree --group-directories-last --icons"
+alias lta="eza --sort Name --long --tree --all --group-directories-last --icons"
 
 alias cls="clear"
 alias cll="clear;ll"
@@ -69,13 +69,13 @@ alias ce="jump_code_exit"
 [[ -f "/opt/homebrew/etc/profile.d/autojump.sh" ]] && source "/opt/homebrew/etc/profile.d/autojump.sh" # macOS
 
 zle -N freverse_search
-bindkey '^r' freverse_search
+bindkey "^r" freverse_search
 
 zle -N fsearch_preview
-bindkey '^f' fsearch_preview
+bindkey "^f" fsearch_preview
 
 zle -N fkill
-bindkey '^k' fkill
+bindkey "^k" fkill
 
 # Extra functions
 function update() {
