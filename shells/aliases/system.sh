@@ -96,7 +96,7 @@ function copy() {
 }
 
 function get_ip_address() {
-    ip=$(curl -s ifconfig.co)
+    ip=$(curl -s "https://api64.ipify.org")
     echo "${ip}" | copy
     echo "${ip}"
 }
