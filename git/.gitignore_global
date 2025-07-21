@@ -1,10 +1,6 @@
-#################### Files to exclude ####################
+# All files/folders that start with triple underscore
+___**
 
-################### Folders to exclude ###################
-# IDE folders
+# IDEs folders
 .vscode/
 .idea/
-
-################## Files not to exclude ##################
-
-################# Folders not to exclude #################
