@@ -16,19 +16,6 @@ function freverse_search() {
     )
 }
 
-function fsearch_preview() {
-    IGNORED_FILES=(-not -name '.pyc' -not -name '.pyo' -not -name '.pyi' -not -name '.pyd')
-    IGNORED_FOLDERS=(-not -path '.' -not -path '*venv' -not -path 'cache' -not -path '.git' -not -path 'node_modules*')
-
-    RBUFFER=$(find . -type f "${IGNORED_FILES[@]}" "${IGNORED_FOLDERS[@]}" -o -type d "${IGNORED_FOLDERS[@]}" | fzf --prompt='Search> ' --query='' --preview '
-        if [[ -d {} ]]; then
-            eza --sort Name --long --all {}
-        else
-            bat --theme=OneHalfDark  --style=numbers --color=always --line-range=:500 {}
-        fi
-    ')
-}
-
 function fkill() {
     local pid=$(
         ps -ef |
