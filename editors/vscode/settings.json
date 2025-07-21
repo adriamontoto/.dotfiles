@@ -6,10 +6,14 @@
   "breadcrumbs.symbolPath": "off",
 
   "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
+  "telemetry.editStats.enabled": false,
 
   "extensions.ignoreRecommendations": true,
 
   "security.workspace.trust.untrustedFiles": "open",
+
+  "debug.closeReadonlyTabsOnEnd": true,
 
   "editor.lineHeight": 1.5,
   "editor.inlineSuggest.enabled": true,
@@ -30,11 +34,11 @@
   "editor.fontFamily": "Cascadia Code NF",
   "editor.quickSuggestionsDelay": 0,
   "editor.largeFileOptimizations": false,
-  "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.linkedEditing": true,
   "editor.wordWrap": "off",
   "editor.stickyScroll.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.tokenColorCustomizations": {
     "[*Light*]": {
       "textMateRules": [
@@ -73,6 +77,7 @@
   "search.useIgnoreFiles": true,
 
   "explorer.confirmDelete": false,
+  "explorer.excludeGitIgnore": true,
   "explorer.confirmDragAndDrop": false,
   "explorer.compactFolders": false,
   "explorer.fileNesting.patterns": {
@@ -91,7 +96,6 @@
   },
 
   "workbench.colorTheme": "Atom One Dark",
-  "workbench.productIconTheme": "el-vsc-v1-icons",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": true,
   "workbench.editorLargeFileConfirmation": 6000,
@@ -100,6 +104,7 @@
   "workbench.tree.indent": 8,
   "workbench.layoutControl.enabled": false,
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
   "workbench.colorCustomizations": {
     "terminalCursor.foreground": "#DCDFE4",
     "terminalCursor.background": "#DCDFE4",
@@ -132,15 +137,9 @@
     "*.cnf": "yaml"
   },
   "files.exclude": {
-    "**/.**coverage**": true,
-    "**/.**venv**": true,
-    "**/**cache**": true,
-    "**/index.txt": true,
-    "**/node_modules": true,
-    "**/cdk.out": true,
     "**/.vscode": true,
-    "**/**.mwb.bak": true,
-    "build": true
+    "**/.idea": true,
+    "**/.claude": true
   },
 
   "remote.SSH.showLoginTerminal": true,
@@ -162,17 +161,32 @@
   "git.enableCommitSigning": true,
   "git.ignoreRebaseWarning": true,
   "git.autofetch": true,
+  "git.autoStash": true,
   "git.suggestSmartCommit": false,
   "git.confirmSync": false,
   "git.defaultBranchName": "master",
   "git.replaceTagsWhenPull": true,
+  "git.allowNoVerifyCommit": true,
+  "git.confirmEmptyCommits": false,
+  "git.alwaysSignOff": true,
+  "git.confirmNoVerifyCommit": false,
 
   "github.copilot.advanced": {
     "authProvider": "github"
   },
   "github.gitProtocol": "ssh",
-  "github.copilot.editor.enableAutoCompletions": true,
-  "github.copilot.chat.useProjectTemplates": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.scopeSelection": true,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
 
   "gitlens.codeLens.enabled": false,
   "gitlens.graph.minimap.additionalTypes": ["localBranches", "stashes", "tags", "remoteBranches"],
@@ -288,6 +302,7 @@
   "todo-tree.general.tags": ["TODO:", "BUG:", "ERROR:", "FIX:", "FIXME:"],
   "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**", "**/*venv*/**"],
 
+  "python.languageServer": "Pylance",
   "python.globalModuleInstallation": true,
   "python.analysis.autoFormatStrings": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
@@ -300,7 +315,6 @@
   },
   "python.testing.pytestEnabled": true,
   "python.testing.unittestArgs": [],
-  "python.languageServer": "Pylance",
   "python.terminal.activateEnvInCurrentTerminal": true,
 
   "pythonIndent.trimLinesWithOnlyWhitespace": true,
@@ -313,8 +327,6 @@
     },
     "diffEditor.ignoreTrimWhitespace": true
   },
-
-  "ruff.configuration": "~/.dotfiles/languages/python/ruff.toml",
 
   "autoDocstring.startOnNewLine": true,
 
@@ -459,5 +471,14 @@
   "sqlfluff.format.enabled": true,
   "sqlfluff.dialect": "postgres",
 
-  "dotenv.enableAutocloaking": false
+  "dotenv.enableAutocloaking": false,
+
+  "chat.commandCenter.enabled": false,
+  "chat.mcp.discovery.enabled": true,
+
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".github/instructions/commit_message.instructions.md"
+    }
+  ]
 }
