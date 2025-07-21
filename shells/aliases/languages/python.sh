@@ -57,6 +57,7 @@ function install_dev_requirements() {
 # Python aliases
 alias py="python3.13"
 alias python="python3.13"
+alias python3="python3.13"
 alias pip="noglob python3.13 -m pip"
 alias create="create_pyvenv"
 alias activate="activate_pyvenv"
