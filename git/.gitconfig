@@ -55,7 +55,8 @@
 	default = simple
 
 [pull]
-	rebase = false
+	rebase = true
+	autostash = true
 
 [fetch]
     # Fetch all tags in addition to branches
