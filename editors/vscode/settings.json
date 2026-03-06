@@ -134,7 +134,8 @@
   "files.autoSave": "afterDelay",
   "files.associations": {
     ".env*": "dotenv",
-    "*.cnf": "yaml"
+    "*.cnf": "yaml",
+    "*.template": "properties"
   },
   "files.exclude": {
     "**/.vscode": true,
@@ -171,9 +172,6 @@
   "git.alwaysSignOff": true,
   "git.confirmNoVerifyCommit": false,
 
-  "github.copilot.advanced": {
-    "authProvider": "github"
-  },
   "github.gitProtocol": "ssh",
   "github.copilot.enable": {
     "*": true,
@@ -184,9 +182,13 @@
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.chat.scopeSelection": true,
-  "github.copilot.chat.agent.thinkingTool": true,
   "github.copilot.chat.editor.temporalContext.enabled": true,
   "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": "documentation/commit_message.md"
+    }
+  ],
 
   "gitlens.codeLens.enabled": false,
   "gitlens.graph.minimap.additionalTypes": ["localBranches", "stashes", "tags", "remoteBranches"],
@@ -476,12 +478,19 @@
 
   "dotenv.enableAutocloaking": false,
 
+  "chat.mcp.gallery.enabled": true,
+  "chat.editing.confirmEditRequestRemoval": false,
   "chat.commandCenter.enabled": false,
-  "chat.mcp.discovery.enabled": true,
-
-  "github.copilot.chat.commitMessageGeneration.instructions": [
-    {
-      "file": ".github/instructions/commit_message.instructions.md"
-    }
-  ]
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true,
+    "windsurf": true,
+    "cursor-global": true,
+    "cursor-workspace": true
+  },
+  "chat.agent.maxRequests": 100,
+  "chat.viewSessions.enabled": false,
+  "chat.viewWelcome.enabled": false,
+  "chat.viewTitle.enabled": false,
+  "chatgpt.runCodexInWindowsSubsystemForLinux": true,
+  "inlineChat.enableV2": true
 }
