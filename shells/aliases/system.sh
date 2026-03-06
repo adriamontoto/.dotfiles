@@ -46,13 +46,13 @@ function jump_code_exit() {
 }
 
 # System aliases
-alias l="eza --sort Name --group-directories-last --icons"
-alias ll="eza --sort Name --long --group-directories-last --icons"
-alias la="eza --sort Name --long --all --group-directories-last --icons"
-alias lr="eza --sort Name --long --recurse --group-directories-last --icons"
-alias lra="eza --sort Name --long --recurse --all --group-directories-last --icons"
-alias lt="eza --sort Name --long --tree --group-directories-last --icons"
-alias lta="eza --sort Name --long --tree --all --group-directories-last --icons"
+alias l="eza --sort Name --group-directories-first --icons"
+alias ll="eza --sort Name --long --group-directories-first --icons"
+alias la="eza --sort Name --long --all --group-directories-first --icons"
+alias lr="eza --sort Name --long --recurse --group-directories-first --icons"
+alias lra="eza --sort Name --long --recurse --all --group-directories-first --icons"
+alias lt="eza --sort Name --long --tree --group-directories-first --icons"
+alias lta="eza --sort Name --long --tree --all --group-directories-first --icons"
 
 alias cls="clear"
 alias cll="clear;ll"
@@ -64,10 +64,9 @@ alias ....="cd ../../.."
 alias de="cd ${HOME}/desktop"
 alias desktop="cd ${HOME}/desktop"
 alias docs="cd ${HOME}/documents"
-alias p="cd ${HOME}/documents/projects"
-alias projects="cd ${HOME}/documents/projects"
 alias dw="cd ${HOME}/downloads"
 alias downloads="cd ${HOME}/downloads"
+alias wp="cd ${HOME}/workspace"
 alias dotfiles="cd ${HOME}/.dotfiles"
 
 alias reload="exec ${SHELL} -l"
