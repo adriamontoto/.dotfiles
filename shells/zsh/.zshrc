@@ -22,4 +22,6 @@ for file in $(find "${HOME}/.dotfiles/shells/aliases" -type f -name "*.sh"); do
     source "${file}"
 done
 
+eval "$(mise activate zsh)"
+
 # zprof
