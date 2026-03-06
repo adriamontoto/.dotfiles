@@ -248,42 +248,42 @@
 
   "todohighlight.keywords": [
     {
-      "text": "TODO:",
+      "text": "# TODO:",
       "color": "rgba(222, 213, 142)",
       "backgroundColor": "rgba(222, 213, 142, 0.1)",
       "isWholeLine": true,
       "overviewRulerColor": "rgba(222, 213, 142)"
     },
     {
-      "text": "BUG:",
+      "text": "# BUG:",
       "color": "rgba(227, 104, 104)",
       "backgroundColor": "rgba(227, 104, 104, 0.1)",
       "isWholeLine": true,
       "overviewRulerColor": "rgba(227, 104, 104)"
     },
     {
-      "text": "ERROR:",
+      "text": "# ERROR:",
       "color": "rgba(227, 104, 104)",
       "backgroundColor": "rgba(227, 104, 104, 0.1)",
       "isWholeLine": true,
       "overviewRulerColor": "rgba(227, 104, 104)"
     },
     {
-      "text": "FIX:",
+      "text": "# FIX:",
       "color": "rgba(213, 156, 217)",
       "backgroundColor": "rgba(213, 156, 217, 0.1)",
       "isWholeLine": true,
       "overviewRulerColor": "rgba(213, 156, 217)"
     },
     {
-      "text": "FIXME:",
+      "text": "# FIXME:",
       "color": "rgba(213, 156, 217)",
       "backgroundColor": "rgba(213, 156, 217, 0.1)",
       "isWholeLine": true,
       "overviewRulerColor": "rgba(213, 156, 217)"
     },
     {
-      "text": "NOTE:",
+      "text": "# NOTE:",
       "color": "rgba(152, 195, 121)",
       "backgroundColor": "rgba(152, 195, 121, 0.1)",
       "isWholeLine": true,
@@ -302,6 +302,10 @@
   "todo-tree.general.tags": ["TODO:", "BUG:", "ERROR:", "FIX:", "FIXME:"],
   "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**", "**/*venv*/**"],
 
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "python.analysis.typeCheckingMode": "strict",
   "python.languageServer": "Pylance",
   "python.globalModuleInstallation": true,
   "python.analysis.autoFormatStrings": true,
@@ -315,7 +319,6 @@
   },
   "python.testing.pytestEnabled": true,
   "python.testing.unittestArgs": [],
-  "python.terminal.activateEnvInCurrentTerminal": true,
 
   "pythonIndent.trimLinesWithOnlyWhitespace": true,
   "pythonIndent.useTabOnHangingIndent": true,
