@@ -3,6 +3,9 @@ ___**
 
 # IDEs folders
 .vscode/
+.cursor/
+.claude/
+.codex/
 .idea/
 
 mise.toml
