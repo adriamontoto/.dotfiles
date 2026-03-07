@@ -76,6 +76,8 @@
   },
 
   "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.experimental.showMoves": true,
 
   "search.useGlobalIgnoreFiles": true,
   "search.useIgnoreFiles": true,
