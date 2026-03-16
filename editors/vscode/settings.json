@@ -34,7 +34,7 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSaveMode": "file",
   "editor.fontLigatures": true,
-  "editor.fontFamily": "Cascadia Code",
+  "editor.fontFamily": "Cascadia Code PL",
   "editor.fontWeight": "400",
   "editor.quickSuggestionsDelay": 0,
   "editor.largeFileOptimizations": false,
@@ -156,10 +156,11 @@
   "path-intellisense.showHiddenFiles": true,
   "path-intellisense.autoSlashAfterDirectory": true,
 
-  "terminal.integrated.fontFamily": "Cascadia Code NF",
+  "terminal.integrated.fontFamily": "Cascadia Code PL",
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.letterSpacing": 0,
   "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.cursorStyleInactive": "block",
   "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
@@ -338,7 +339,7 @@
       "source.organizeImports": "explicit",
       "source.fixAll": "explicit"
     },
-    "diffEditor.ignoreTrimWhitespace": true
+    "diffEditor.ignoreTrimWhitespace": false
   },
 
   "autoDocstring.startOnNewLine": true,
