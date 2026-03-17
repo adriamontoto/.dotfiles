@@ -60,6 +60,7 @@ auto-update = download
 auto-update = check
 copy-on-select = false
 #working-directory = home
+term = xterm-256color
 
 # Keybinds
 keybind = command+shift+n=new_tab
