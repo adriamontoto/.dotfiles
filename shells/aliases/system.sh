@@ -117,9 +117,15 @@ function copy() {
 }
 
 function now() {
-    now=$(date "+%Y-%m-%dT%H:%M:%S")
-    echo "${now}" | copy
-    echo "${now}"
+    timestamp=$(date "+%Y-%m-%dT%H:%M:%S%z" | sed -E 's/([+-][0-9]{2})([0-9]{2})$/\1:\2/')
+    echo "${timestamp}" | copy
+    echo "${timestamp}"
+}
+
+function utc() {
+    timestamp=$(date -u "+%Y-%m-%dT%H:%M:%SZ+00:00")
+    echo "${timestamp}" | copy
+    echo "${timestamp}"
 }
 
 function myip() {
