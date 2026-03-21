@@ -25,4 +25,8 @@ done
 eval "$(mise activate zsh)"
 eval "$(zoxide init zsh)"
 
+fpath=(/Users/adria/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+
 # zprof
