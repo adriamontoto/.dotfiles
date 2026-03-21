@@ -2,7 +2,6 @@
 tap "homebrew/bundle"
 
 # Formulas
-brew "autojump"
 brew "awscli"
 brew "bash"
 brew "bat"
@@ -22,6 +21,7 @@ brew "speedtest-cli"
 brew "tree"
 brew "wget"
 brew "xz"
+brew "zoxide"
 brew "zsh"
 
 # GUI APPs

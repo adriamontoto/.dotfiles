@@ -38,11 +38,11 @@ function fkill() {
 }
 
 function jump_code() {
-    j $1 && code .
+    z $1 && code .
 }
 
 function jump_code_exit() {
-    j $1 && code . && exit
+    z $1 && code . && exit
 }
 
 # System aliases
@@ -73,8 +73,6 @@ alias reload="exec ${SHELL} -l"
 
 alias c="jump_code"
 alias ce="jump_code_exit"
-[[ -f "/usr/share/autojump/autojump.sh" ]] && source "/usr/share/autojump/autojump.sh"                 # debian
-[[ -f "/opt/homebrew/etc/profile.d/autojump.sh" ]] && source "/opt/homebrew/etc/profile.d/autojump.sh" # macOS
 
 zle -N freverse_search
 bindkey "^r" freverse_search

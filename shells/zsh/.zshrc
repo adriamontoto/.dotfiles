@@ -23,5 +23,6 @@ for file in $(find "${HOME}/.dotfiles/shells/aliases" -type f -name "*.sh"); do
 done
 
 eval "$(mise activate zsh)"
+eval "$(zoxide init zsh)"
 
 # zprof
