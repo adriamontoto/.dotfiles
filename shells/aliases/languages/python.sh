@@ -41,29 +41,10 @@ function remove_pyvenv() {
     rm -rf "${venv_name}"
 }
 
-function install_requirements() {
-    local requirements_file="${1}"
-    if [[ -z "${requirements_file}" ]]; then
-        requirements_file="requirements.txt"
-    fi
-
-    python -m pip install -r "${requirements_file}"
-}
-
-function install_dev_requirements() {
-    install_requirements "requirements_dev.txt"
-}
-
 # Python aliases
-alias py="python3.13"
-alias python="python3.13"
-alias python3="python3.13"
-alias pip="noglob python3.13 -m pip"
+alias py="python"
+alias pip="noglob python -m pip"
 alias create="create_pyvenv"
 alias activate="activate_pyvenv"
 # deactivate is a built-in command in Python
 alias remove="remove_pyvenv"
-
-alias install="install_dev_requirements"
-alias installr="install_requirements"
-alias installd="install_dev_requirements"
