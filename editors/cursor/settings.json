@@ -137,7 +137,7 @@
   "remote.autoForwardPortsSource": "hybrid",
   "path-intellisense.showHiddenFiles": true,
   "path-intellisense.autoSlashAfterDirectory": true,
-  "terminal.integrated.fontFamily": "Cascadia Code PL",
+  "terminal.integrated.fontFamily": "Cascadia Code NF",
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.letterSpacing": 0,
   "terminal.integrated.cursorBlinking": true,
