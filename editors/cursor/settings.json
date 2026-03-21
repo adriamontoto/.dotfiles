@@ -90,6 +90,7 @@
   "workbench.colorTheme": "Atom One Dark",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": true,
+  "workbench.layoutControl.enabled": false,
   "workbench.editorLargeFileConfirmation": 6000,
   "workbench.list.smoothScrolling": true,
   "workbench.list.horizontalScrolling": false,
