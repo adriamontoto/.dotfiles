@@ -1,6 +1,6 @@
 # System functions
 function mkd() {
-    mkdir -p $1 && cd $1
+    mkdir -p "$1" && cd "$1"
 }
 
 function freverse_search() {
@@ -38,11 +38,11 @@ function fkill() {
 }
 
 function jump_code() {
-    z $1 && code .
+    z "$1" && code .
 }
 
 function jump_code_exit() {
-    z $1 && code . && exit
+    z "$1" && code . && exit
 }
 
 # System aliases
@@ -76,9 +76,6 @@ alias ce="jump_code_exit"
 
 zle -N freverse_search
 bindkey "^r" freverse_search
-
-zle -N fsearch_preview
-bindkey "^f" fsearch_preview
 
 zle -N fkill
 bindkey "^k" fkill
@@ -117,24 +114,28 @@ function copy() {
 }
 
 function now() {
+    local timestamp
     timestamp=$(date "+%Y-%m-%dT%H:%M:%S%z" | sed -E 's/([+-][0-9]{2})([0-9]{2})$/\1:\2/')
     echo "${timestamp}" | copy
     echo "${timestamp}"
 }
 
 function utc() {
-    timestamp=$(date -u "+%Y-%m-%dT%H:%M:%SZ+00:00")
+    local timestamp
+    timestamp=$(date -u "+%Y-%m-%dT%H:%M:%SZ")
     echo "${timestamp}" | copy
     echo "${timestamp}"
 }
 
 function myip() {
+    local ip
     ip=$(curl -s "https://api64.ipify.org")
     echo "${ip}" | copy
     echo "${ip}"
 }
 
 function myprivate() {
+    local ip
     ip=$(ipconfig getifaddr en0)
     echo "${ip}" | copy
     echo "${ip}"

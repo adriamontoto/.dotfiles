@@ -22,10 +22,18 @@ for file in $(find "${HOME}/.dotfiles/shells/aliases" -type f -name "*.sh"); do
     source "${file}"
 done
 
-eval "$(mise activate zsh)"
-eval "$(zoxide init zsh)"
+if (( $+commands[mise] )); then
+    eval "$(mise activate zsh)"
+fi
 
-fpath=(/Users/adria/.docker/completions $fpath)
+if (( $+commands[zoxide] )); then
+    eval "$(zoxide init zsh)"
+fi
+
+if [[ -d "${HOME}/.docker/completions" ]]; then
+    fpath=("${HOME}/.docker/completions" $fpath)
+fi
+
 autoload -Uz compinit
 compinit
 
