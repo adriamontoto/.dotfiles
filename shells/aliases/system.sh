@@ -128,6 +128,11 @@ function myip() {
     echo "${ip}"
 }
 
+function myprivate() {
+    ip=$(ipconfig getifaddr en0)
+    echo "${ip}" | copy
+    echo "${ip}"
+}
 
 if command -v bat &>/dev/null; then
     alias cat="bat"
