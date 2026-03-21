@@ -63,7 +63,7 @@ copy-on-select = false
 term = xterm-256color
 
 # Keybinds
-keybind = command+shift+n=new_tab
+keybind = command+t=new_tab
 keybind = command+w=close_tab
 keybind = command+option+left=previous_tab
 keybind = command+option+right=next_tab
