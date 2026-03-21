@@ -122,14 +122,12 @@ function now() {
     echo "${now}"
 }
 
-function get_ip_address() {
+function myip() {
     ip=$(curl -s "https://api64.ipify.org")
     echo "${ip}" | copy
     echo "${ip}"
 }
 
-# Extra aliases
-alias myip="get_ip_address"
 
 if command -v bat &>/dev/null; then
     alias cat="bat"
