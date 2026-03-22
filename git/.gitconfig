@@ -17,8 +17,8 @@
 	pager = less -R
 	editor = code --wait
 
-	excludesfile = ~/.dotfiles/git/.gitignore_global
-	attributesfile = ~/.dotfiles/git/.gitattributes_global
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributee
 
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
