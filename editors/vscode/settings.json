@@ -492,15 +492,8 @@
 
   "dotenv.enableAutocloaking": false,
 
-  "chat.mcp.gallery.enabled": true,
   "chat.editing.confirmEditRequestRemoval": false,
   "chat.commandCenter.enabled": false,
-  "chat.mcp.discovery.enabled": {
-    "claude-desktop": true,
-    "windsurf": true,
-    "cursor-global": true,
-    "cursor-workspace": true
-  },
   "chat.agent.maxRequests": 100,
   "chat.viewSessions.enabled": false,
   "chat.viewWelcome.enabled": false,
