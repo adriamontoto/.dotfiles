@@ -1,3 +1,9 @@
-[submodule "fonts/cascadia_code"]
-	path = fonts/cascadia_code
+[submodule "modules/fonts/cascadia_code"]
+	path = modules/fonts/cascadia_code
 	url = git@github.com:microsoft/cascadia-code.git
+	ignore = dirty
+
+[submodule "modules/private"]
+	path = modules/private
+	url = git@github.com:adriamontoto/.dotfiles-private.git
+	ignore = dirty
