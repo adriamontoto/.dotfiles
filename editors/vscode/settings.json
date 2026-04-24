@@ -313,8 +313,8 @@
   "todo-tree.general.tags": ["TODO:", "BUG:", "ERROR:", "FIX:", "FIXME:"],
   "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**", "**/*venv*/**"],
 
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  "js.updateImportsOnFileMove.enabled": "always",
+  "ts.updateImportsOnFileMove.enabled": "always",
 
   "python.analysis.typeCheckingMode": "strict",
   "python.languageServer": "Pylance",
@@ -498,6 +498,10 @@
   "chat.viewSessions.enabled": false,
   "chat.viewWelcome.enabled": false,
   "chat.viewTitle.enabled": false,
+  "chat.instructionsFilesLocations": {
+    "~/.copilot/instructions": true
+  },
   "chatgpt.runCodexInWindowsSubsystemForLinux": true,
-  "inlineChat.enableV2": true
+  "inlineChat.enableV2": true,
+  "chat.tips.enabled": false
 }
