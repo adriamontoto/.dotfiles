@@ -17,6 +17,7 @@ plugins=(
     zsh-autosuggestions)
 
 source "${ZSH}/oh-my-zsh.sh"
+source "${HOME}/.config/op/plugins.sh"
 
 for file in $(find "${HOME}/.dotfiles/shells/aliases" -type f -name "*.sh"); do
     source "${file}"
