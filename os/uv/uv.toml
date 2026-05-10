@@ -1,4 +1,4 @@
-exclude-newer = "4 days"
+exclude-newer = "7 days"
 index-strategy = "first-index"
 prerelease = "if-necessary-or-explicit"
 preview = false
@@ -11,6 +11,7 @@ python-downloads = "never"
 python-preference = "system"
 
 [pip]
+exclude-newer = "7 days"
 generate-hashes = true
 verify-hashes = true
 require-hashes = true

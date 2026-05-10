@@ -1,6 +1,6 @@
 verifyStoreIntegrity: true
 strictSsl: true
-minimumReleaseAge: 5760
+minimumReleaseAge: 10080
 minimumReleaseAgeStrict: true
 minimumReleaseAgeIgnoreMissingTime: false
 blockExoticSubdeps: true
