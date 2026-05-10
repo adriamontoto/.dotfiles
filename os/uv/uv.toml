@@ -1,0 +1,23 @@
+exclude-newer = "4 days"
+index-strategy = "first-index"
+prerelease = "if-necessary-or-explicit"
+preview = false
+upgrade = false
+resolution = "highest"
+no-build = true
+no-build-isolation = false
+link-mode = "clone"
+python-downloads = "never"
+python-preference = "system"
+
+[pip]
+generate-hashes = true
+verify-hashes = true
+require-hashes = true
+strict = true
+index-strategy = "first-index"
+prerelease = "if-necessary-or-explicit"
+resolution = "highest"
+no-build = true
+no-build-isolation = false
+link-mode = "clone"
