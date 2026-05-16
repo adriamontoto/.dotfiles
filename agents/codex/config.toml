@@ -1,10 +1,21 @@
 model = "gpt-5.5"
 web_search = "cached"
 personality = "pragmatic"
+model_verbosity = "low"
 model_reasoning_effort = "medium"
 plan_mode_reasoning_effort = "xhigh"
 forced_login_method = "chatgpt"
 cli_auth_credentials_store = "keyring"
+mcp_oauth_credentials_store = "keyring"
+file_opener = "vscode"
+hide_agent_reasoning = false
+show_raw_agent_reasoning = false
+disable_paste_burst = false
+check_for_update_on_startup = true
+approval_policy = "on-request"
+approvals_reviewer = "user"
+sandbox_mode = "workspace-write"
+default_permissions = "locked_workspace"
 
 [profiles.deep-review]
 model = "gpt-5.5"
@@ -23,9 +34,6 @@ steer = true
 use_linux_sandbox_bwrap = true
 multi_agent = true
 apps = true
-
-[sandbox_workspace_write]
-network_access = true
 
 [analytics]
 enabled = false
@@ -55,3 +63,21 @@ status_line = [
     "weekly-limit",
 ]
 theme = "one-half-dark"
+
+[permissions.locked_workspace.filesystem]
+glob_scan_max_depth = 5
+
+[permissions.locked_workspace.filesystem.":project_roots"]
+"." = "write"
+".env" = "none"
+".env.*" = "none"
+".env.example" = "write"
+
+[permissions.locked_workspace.filesystem."/workspace"]
+"." = "write"
+".env" = "none"
+".env.*" = "none"
+".env.example" = "write"
+
+[permissions.locked_workspace.network]
+enabled = false
