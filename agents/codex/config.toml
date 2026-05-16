@@ -34,6 +34,24 @@ steer = true
 use_linux_sandbox_bwrap = true
 multi_agent = true
 apps = true
+browser_use = true
+browser_use_external = true
+computer_use = true
+goals = true
+hooks = true
+image_generation = true
+personality = true
+plugins = true
+enable_request_compression = true
+guardian_approval = true
+in_app_browser = true
+shell_tool = true
+skill_mcp_dependency_install = true
+tool_call_mcp_elicitation = true
+tool_search = true
+tool_suggest = true
+unavailable_dummy_tools = true
+workspace_dependencies = true
 
 [analytics]
 enabled = false
