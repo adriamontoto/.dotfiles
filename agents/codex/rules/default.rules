@@ -1,0 +1,122 @@
+prefix_rule(pattern=["make"], decision="allow")
+prefix_rule(pattern=["agent-browser"], decision="allow")
+prefix_rule(
+    pattern = [["curl", "wget", "http", "https"]],
+    decision = "prompt",
+    justification = "Network download commands should be reviewed before execution.",
+)
+prefix_rule(
+    pattern = [["npm", "pnpm", "yarn", "bun"], "install"],
+    decision = "prompt",
+    justification = "Dependency installation may execute supply-chain code.",
+)
+prefix_rule(
+    pattern = [["npm", "pnpm", "yarn", "bun"], "add"],
+    decision = "prompt",
+    justification = "Adding dependencies modifies lockfiles and may fetch third-party code.",
+)
+prefix_rule(
+    pattern = [["npm", "pnpm"], "ci"],
+    decision = "prompt",
+    justification = "Clean dependency installation may fetch and execute third-party code.",
+)
+prefix_rule(
+    pattern = [["npx", "pnpm", "yarn", "bunx", "uvx"]],
+    decision = "prompt",
+    justification = "Package execution tools may fetch and run remote code.",
+)
+prefix_rule(
+   pattern = ["pnpm", "dlx"],
+    decision = "prompt",
+    justification = "Package execution tools may fetch and run remote code.",
+)
+prefix_rule(
+    pattern = ["yarn", "dlx"],
+    decision = "prompt",
+    justification = "Package execution tools may fetch and run remote code.",
+)
+prefix_rule(
+    pattern = [["pip", "pip3"], "install"],
+    decision = "prompt",
+    justification = "Dependency installation may execute supply-chain code.",
+)
+prefix_rule(
+    pattern = ["uv", "pip", "install"],
+    decision = "prompt",
+    justification = "Dependency installation may execute supply-chain code.",
+)
+prefix_rule(
+    pattern = ["uv", "sync"],
+    decision = "prompt",
+    justification = "Adding dependencies modifies lockfiles and may fetch third-party code.",
+)
+prefix_rule(
+    pattern = ["uv", "add"],
+    decision = "prompt",
+    justification = "Adding dependencies modifies lockfiles and may fetch third-party code.",
+)
+prefix_rule(
+    pattern = ["git", "push"],
+    decision = "prompt",
+    justification = "Pushing changes modifies a remote repository.",
+)
+prefix_rule(
+    pattern = ["git", "push", "--force"],
+    decision = "forbidden",
+    justification = "Force-push is destructive. Run manually if truly needed.",
+)
+prefix_rule(
+    pattern = ["git", "push", "--force-with-lease"],
+    decision = "prompt",
+    justification = "Force-with-lease rewrites remote history and must be reviewed.",
+)
+prefix_rule(
+    pattern = ["git", "fetch"],
+    decision = "prompt",
+    justification = "Fetching uses network access.",
+)
+prefix_rule(
+    pattern = ["git", "pull"],
+    decision = "prompt",
+    justification = "Pulling uses network access and modifies the working tree.",
+)
+prefix_rule(
+    pattern = ["git", "clone"],
+    decision = "prompt",
+    justification = "Cloning fetches external code.",
+)
+prefix_rule(
+    pattern = ["git", "submodule", "update"],
+    decision = "prompt",
+    justification = "Updating submodules may fetch external code.",
+)
+prefix_rule(
+    pattern = ["gh"],
+    decision = "prompt",
+    justification = "GitHub CLI can read or modify remote GitHub state.",
+)
+prefix_rule(
+    pattern = ["rm", "-rf"],
+    decision = "prompt",
+    justification = "Recursive deletion is destructive and must be reviewed.",
+)
+prefix_rule(
+    pattern = ["rm", "-rf", "/"],
+    decision = "forbidden",
+    justification = "Never allow recursive deletion of root.",
+)
+prefix_rule(
+    pattern = ["sudo"],
+    decision = "prompt",
+    justification = "sudo escalates privileges and must be reviewed.",
+)
+prefix_rule(
+    pattern = [["bash", "zsh", "sh"], "-lc"],
+    decision = "prompt",
+    justification = "Shell-wrapped commands can hide network calls or destructive operations.",
+)
+prefix_rule(
+    pattern = [["bash", "zsh", "sh"], "-c"],
+    decision = "prompt",
+    justification = "Shell-wrapped commands can hide network calls or destructive operations.",
+)
