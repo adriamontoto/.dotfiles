@@ -63,6 +63,11 @@ status_line = [
     "weekly-limit",
 ]
 theme = "one-half-dark"
+notifications = ["agent-turn-complete", "approval-requested"]
+notification_method = "auto"
+notification_condition = "unfocused"
+animations = true
+show_tooltips = true
 
 [permissions.locked_workspace.filesystem]
 glob_scan_max_depth = 5
