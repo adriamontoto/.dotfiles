@@ -86,6 +86,10 @@ notification_method = "auto"
 notification_condition = "unfocused"
 animations = true
 show_tooltips = true
+status_line_use_colors = true
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
 
 [permissions.locked_workspace.filesystem]
 glob_scan_max_depth = 5
